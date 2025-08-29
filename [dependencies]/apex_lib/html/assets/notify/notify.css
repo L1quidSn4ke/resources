@@ -1,0 +1,108 @@
+:root {
+    --backgroudColor: rgba(31, 35, 43, 0.9);
+    --boxshadowColor: rgba(31, 35, 43, .3);
+    --textColor: rgb(241, 241, 241);
+    --successColor: rgb(136, 218, 34);
+    --infoColor: rgb(34, 166, 218);
+    --warningColor: rgb(218, 215, 34);
+    --errorColor: rgb(218, 34, 59);
+}
+
+body {
+    overflow: hidden;
+}
+
+.notify {
+    width: 100px;
+    float: right;
+    top: 30px;
+    right: 200px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    text-align: left;
+}
+
+.wrapper {
+    width: 200px;
+    height: auto;
+    background-color: #1e1e1e;
+    float: right;
+}
+
+.main {
+    margin: 12px 16px 12px 56px;
+    position: relative;
+}
+
+.main::before {
+    font-size: 24px;
+    top: calc(50% - 12px);
+    left: -40px;
+    line-height: 24px;
+    position: absolute;
+}
+
+
+/* Success Notification */
+.success {
+    background: var(--backgroudColor);
+    color: var(--textColor);
+    padding: 10px 5px;
+    box-shadow: 0 0 5px var(--boxshadowColor);
+    border-right:2px solid var(--successColor);
+}
+
+.success-icon::before {
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    color: var(--successColor);
+}
+
+/* Info Notification */
+.info {    
+    background: var(--backgroudColor);
+    color: var(--textColor);
+    padding: 10px 5px;
+    box-shadow: 0 0 5px var(--boxshadowColor);
+    border-right:2px solid var(--infoColor);
+}
+
+.info-icon::before {
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f05a";
+    color: var(--infoColor);
+}
+
+/* Warning Notification */
+.warning {    
+    background: var(--backgroudColor);
+    color: var(--textColor);
+    padding: 10px 5px;
+    box-shadow: 0 0 5px var(--boxshadowColor);
+    border-right:2px solid var(--warningColor);
+}
+
+.warning-icon::before {
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f071";
+    color: var(--warningColor);
+}
+
+/* Error Notification */
+.error {
+    background: var(--backgroudColor);
+    color: var(--textColor);
+    padding: 10px 5px;
+    box-shadow: 0 0 5px var(--boxshadowColor);
+    border-right:2px solid var(--errorColor);
+}
+
+.error-icon::before {
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f06a";
+    color: var(--errorColor);
+}
